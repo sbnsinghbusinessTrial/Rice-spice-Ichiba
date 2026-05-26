@@ -65,8 +65,9 @@ padding:50px;
 
 .category-grid{
     display:grid;
-    grid-template-columns:repeat(5, 1fr);
+    grid-template-columns:repeat(5, 200px);
     gap:20px;
+    justify-content:center;
 }
 
 .card{
