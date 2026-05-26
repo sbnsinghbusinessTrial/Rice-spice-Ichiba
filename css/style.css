@@ -40,7 +40,7 @@ position:relative;
 
 .hero img{
 width:50%;
-height:600px;
+height:auto;
 object-fit:cover;
 }
 
