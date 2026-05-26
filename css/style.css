@@ -8,46 +8,77 @@ body{
 font-family:Arial,sans-serif;
 }
 
+/* TOP BAR */
 .topbar{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px;
 background:#0f5132;
-    color:white;
+color:white;
 }
 
 .topbar input{
 width:250px;
 padding:10px;
+border-radius:5px;
+border:none;
 }
 
+/* NAV */
 nav{
 display:flex;
-justify-content:center;
-gap:25px;
-padding:15px;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
 background:#198754;
+flex-wrap:wrap;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
+font-weight:bold;
 }
 
+/* SOCIAL ICONS */
+.socials{
+display:flex;
+gap:15px;
+}
+
+.socials a{
+color:white;
+font-size:20px;
+transition:0.3s;
+}
+
+.socials a:hover{
+color:#ffd700;
+}
+
+/* HERO */
 .hero{
-    display:flex;
-    justify-content:center;
+display:flex;
+justify-content:center;
+position:relative;
 }
 
 .hero img{
-    width:50%;
-    height:auto;
+width:100%;
+height:auto;
 }
 
 .hero-text{
 position:absolute;
 top:40%;
 left:10%;
+color:white;
 }
 
 .btn{
@@ -57,35 +88,39 @@ padding:10px 20px;
 color:white;
 text-decoration:none;
 margin-top:15px;
+border-radius:5px;
 }
 
+/* CATEGORIES */
 .categories{
 padding:50px;
 }
 
 .category-grid{
-    display:grid;
-    grid-template-columns:repeat(5, 200px);
-    gap:20px;
-    justify-content:center;
+display:grid;
+grid-template-columns:repeat(5, 200px);
+gap:20px;
+justify-content:center;
 }
 
 .card{
-    border:1px solid #ddd;
-    border-radius:10px;
-    overflow:hidden;
+border:1px solid #ddd;
+border-radius:10px;
+overflow:hidden;
+background:white;
 }
 
 .card img{
-    width:100%;
-    aspect-ratio:1/1;
-    object-fit:cover;
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
 }
 
 .card h3{
-    padding:10px;
+padding:10px;
 }
 
+/* PRODUCTS */
 .products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -97,6 +132,7 @@ padding:40px;
 box-shadow:0 0 10px #ddd;
 padding:15px;
 text-align:center;
+border-radius:10px;
 }
 
 .product img{
@@ -108,8 +144,13 @@ object-fit:cover;
 .product button{
 padding:10px 20px;
 margin-top:10px;
+background:#198754;
+color:white;
+border:none;
+border-radius:5px;
 }
 
+/* BLOG + CONTACT */
 .blog,
 .contact{
 padding:50px;
