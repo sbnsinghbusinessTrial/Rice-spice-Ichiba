@@ -38,9 +38,12 @@ text-decoration:none;
 position:relative;
 }
 
+.hero{
+    display:flex;
+    justify-content:center;
+}
+
 .hero img{
-    display:block;
-    margin:auto;
     width:50%;
     height:auto;
 }
