@@ -12,8 +12,8 @@ font-family:Arial,sans-serif;
 display:flex;
 justify-content:space-between;
 padding:20px;
-/* background:#0f5132; */
-/* color:white; */
+background:#0f5132;
+    color:white;
 }
 
 .topbar input{
@@ -71,8 +71,19 @@ padding:50px;
 }
 
 .card{
-    border:2px solid red;
-    min-height:150px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.card img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:10px;
 }
 
 .products{
