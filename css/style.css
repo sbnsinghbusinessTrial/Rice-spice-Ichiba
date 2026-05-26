@@ -64,9 +64,10 @@ padding:50px;
 }
 
 .category-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows:repeat(3, auto);
+    gap:20px;
 }
 
 .card{
