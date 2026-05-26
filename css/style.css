@@ -35,10 +35,6 @@ text-decoration:none;
 }
 
 .hero{
-position:relative;
-}
-
-.hero{
     display:flex;
     justify-content:center;
 }
