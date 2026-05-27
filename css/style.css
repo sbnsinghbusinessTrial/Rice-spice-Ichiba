@@ -352,3 +352,20 @@ footer{
         grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
     }
 }
+@media (max-width:768px){
+
+    .category-grid{
+        display:grid !important;
+        grid-template-columns:1fr 1fr 1fr !important;
+        gap:8px !important;
+    }
+
+    .card img{
+        height:60px !important;
+    }
+
+    .card h3{
+        font-size:11px !important;
+    }
+
+}
