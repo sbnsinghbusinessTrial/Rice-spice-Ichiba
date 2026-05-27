@@ -87,60 +87,36 @@ body{
 /* NAVIGATION */
 
 nav{
-
     display:flex;
-
-    justify-content:space-between;
-
     align-items:center;
-
     background:#198754;
-
     padding:15px 30px;
 }
 
+/* Navigation links */
 .nav-links{
-
     display:flex;
-
     gap:50px;
 }
 
-.nav-links a{
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    font-size:22px;
-}
-
-/* PHONE */
-
+/* Push phone to far right */
 .phone-number{
+    margin-left:auto;
 
     display:flex;
-
     align-items:center;
-
     gap:10px;
 
     color:white;
-
     font-size:20px;
-
     font-weight:bold;
 }
 
-.phone-number i{
-
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
     font-size:22px;
-}
-
-nav a:hover{
-    color:#ffd700;
 }
 
 /* HERO */
