@@ -87,29 +87,22 @@ body{
 /* NAVIGATION */
 
 nav{
+    width:100%;
+
     display:flex;
+
+    justify-content:space-between;
+
     align-items:center;
+
     background:#198754;
+
     padding:15px 30px;
 }
 
-/* Navigation links */
 .nav-links{
     display:flex;
     gap:50px;
-}
-
-/* Push phone to far right */
-.phone-number{
-    margin-left:auto;
-
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    color:white;
-    font-size:20px;
-    font-weight:bold;
 }
 
 .nav-links a{
@@ -117,6 +110,16 @@ nav{
     text-decoration:none;
     font-weight:bold;
     font-size:22px;
+}
+
+.phone-number{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    color:white;
+    font-size:20px;
+    font-weight:bold;
 }
 
 /* HERO */
