@@ -81,7 +81,7 @@ body{
 
     outline:none;
 
-    font-size:15px;
+    font-size:20px;
 }
 
 /* NAVIGATION */
@@ -97,19 +97,19 @@ nav{
 
     background:#198754;
 
-    padding:15px 30px;
+    padding:20px 35px;
 }
 
 .nav-links{
     display:flex;
-    gap:50px;
+    gap:60px;
 }
 
 .nav-links a{
     color:white;
     text-decoration:none;
     font-weight:bold;
-    font-size:25px;
+    font-size:30px;
 }
 
 .phone-number{
@@ -118,7 +118,7 @@ nav{
     gap:10px;
 
     color:white;
-    font-size:30px;
+    font-size:35px;
     font-weight:bold;
 }
 
