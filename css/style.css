@@ -89,7 +89,7 @@ body{
 nav{
     display:flex;
     justify-content:center;
-    gap:35px;
+    gap:50px;
     background:#198754;
     padding:15px;
 }
@@ -98,7 +98,7 @@ nav a{
     color:white;
     text-decoration:none;
     font-weight:bold;
-    font-size:20px;
+    font-size:22px;
     transition:0.3s;
 }
 
