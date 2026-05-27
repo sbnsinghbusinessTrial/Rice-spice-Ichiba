@@ -85,14 +85,15 @@ nav a:hover{
 /* HERO */
 
 .hero{
-    position:relative;
+    text-align:center;
+    padding:30px;
 }
 
 .hero img{
-    width:100%;
-    height:500px;
+    width:100px;
+    height:100px;
     object-fit:cover;
-    display:block;
+    border-radius:15px; /* optional rounded corners */
 }
 
 .hero-text{
