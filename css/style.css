@@ -91,15 +91,14 @@ nav{
     justify-content:center;
     gap:50px;
     background:#198754;
-    padding:20px;
+    padding:25px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
     font-weight:bold;
-    font-size:25px;
-    transition:0.3s;
+    font-size:32px !important;
 }
 
 nav a:hover{
