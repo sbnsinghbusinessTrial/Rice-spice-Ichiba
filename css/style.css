@@ -130,8 +130,8 @@ nav{
 }
 
 .hero-logo{
-    width:100px;
-    height:100px;
+    width:150px;
+    height:150px;
     border-radius:50%;
     object-fit:cover;
     margin-bottom:20px;
@@ -147,12 +147,12 @@ nav{
 }
 
 .hero-text h2{
-    font-size:48px;
+    font-size:100px;
     margin-bottom:15px;
 }
 
 .hero-text p{
-    font-size:20px;
+    font-size:50px;
     margin-bottom:20px;
 }
 
