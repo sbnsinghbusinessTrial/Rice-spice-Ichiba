@@ -211,9 +211,10 @@ nav{
 
 .card img{
     width:100%;
-    height:auto;
+    height:220px;
     object-fit:contain;
-    display:block;
+    background:#fff;
+    padding:10px;
 }
 
 .card h3{
