@@ -17,55 +17,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <body>
 
 <!-- HEADER -->
-
-<header>
-
-<div class="topbar">
-
-    <div class="topbar-left">
-        <img src="../images/logo.jpg"
-             alt="Rice Spice Ichiba"
-             class="site-logo">
-    </div>
-
-    <div class="topbar-center">
-
-        <div class="socials">
-
-            <a href="https://facebook.com" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-
-            <a href="https://instagram.com" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="topbar-right">
-        <input type="text" placeholder="Search products">
-    </div>
-
-</div>
-
-<nav>
-
-<div class="nav-links">
-    <a href="../index.html">Home</a>
-    <a href="../index.html#category">Categories</a>
-    <a href="../index.html#contact">Contact</a>
-</div>
-
-<div class="phone-number">
-    <i class="fas fa-phone"></i>
-    090-XXXX-XXXX
-</div>
-
-</nav>
-
-</header>
+<div id="header"></div>
 
 <!-- PAGE TITLE -->
 
@@ -91,10 +43,14 @@ Best spices from Nepal and India available now.
 
     <p>
         <del>¥3,800</del>
-        <strong> ¥3,300</strong>
+        <strong>¥3,300</strong>
     </p>
 
-    <button>Order</button>
+    <button class="add-to-cart"
+    data-name="Basmati Rice 5kg"
+    data-price="3300">
+    Add To Cart
+    </button>
 
 </div>
 
@@ -106,10 +62,14 @@ Best spices from Nepal and India available now.
 
     <p>
         <del>¥600</del>
-        <strong> ¥450</strong>
+        <strong>¥450</strong>
     </p>
 
-    <button>Order</button>
+    <button class="add-to-cart"
+    data-name="Masala Mix"
+    data-price="450">
+    Add To Cart
+    </button>
 
 </div>
 
@@ -121,32 +81,23 @@ Best spices from Nepal and India available now.
 
     <p>
         <del>¥1,500</del>
-        <strong> ¥1,200</strong>
+        <strong>¥1,200</strong>
     </p>
 
-    <button>Order</button>
+    <button class="add-to-cart"
+    data-name="Halal Chicken"
+    data-price="1200">
+    Add To Cart
+    </button>
 
 </div>
 
 </section>
 
-<!-- CONTACT -->
+<!-- FOOTER -->
+<div id="footer"></div>
 
-<section class="contact">
-
-<h2>Need Assistance?</h2>
-
-<p>Phone: 090-XXXX-XXXX</p>
-
-<p>Address: Nishifunabashi, Chiba</p>
-
-</section>
-
-<footer>
-
-<p>© Rice Spice Ichiba</p>
-
-</footer>
+<script src="../js/include-category.js"></script>
 
 </body>
 
