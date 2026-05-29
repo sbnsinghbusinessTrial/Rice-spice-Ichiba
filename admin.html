@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Orders</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>All Orders</h1>
+
+<div id="orders"></div>
+
+<script>
+
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+let html = "";
+
+orders.forEach((o, index) => {
+
+html += `
+<div style="border:1px solid #ccc; margin:10px; padding:10px;">
+<h3>Order ${index + 1}</h3>
+<p><b>Order ID:</b> ${o.orderNumber}</p>
+<p><b>Name:</b> ${o.name}</p>
+<p><b>Phone:</b> ${o.phone}</p>
+<p><b>Total:</b> ¥${o.total}</p>
+
+<h4>Items:</h4>
+<ul>
+${o.cart.map(item => `<li>${item.name} - ¥${item.price}</li>`).join("")}
+</ul>
+
+</div>
+`;
+
+});
+
+document.getElementById("orders").innerHTML = html;
+
+</script>
+
+</body>
+</html>
