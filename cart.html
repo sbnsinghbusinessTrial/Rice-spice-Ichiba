@@ -6,6 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shopping Cart</title>
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+body { font-family: Arial; padding: 20px; max-width: 800px; margin: auto; }
+.item { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+button { margin: 5px; padding: 5px 10px; }
+</style>
+
 </head>
 
 <body>
@@ -14,73 +21,90 @@
 
 <a href="index.html">← Continue Shopping</a>
 
-<div id="cartItems">
-Loading cart...
-</div>
+<div id="cartItems"></div>
 
 <h2 id="cartTotal"></h2>
 
-<button onclick="clearCart()">
-Clear Cart
-</button>
-
-<button onclick="goCheckout()">
-Checkout
-</button>
+<button onclick="clearCart()">Clear Cart</button>
+<button onclick="goCheckout()">Checkout</button>
 
 <script>
 
-let cart =
-JSON.parse(
-localStorage.getItem("cart")
-) || [];
+function getCart(){
+return JSON.parse(localStorage.getItem("cart")) || [];
+}
 
-console.log(cart);
+function saveCart(cart){
+localStorage.setItem("cart", JSON.stringify(cart));
+}
 
-alert("Items in cart: " + cart.length);
+function renderCart(){
 
+let cart = getCart();
 let html = "";
-
 let total = 0;
 
-cart.forEach(item => {
+cart.forEach((item, index) => {
+
+let itemTotal = item.price * item.qty;
+total += itemTotal;
 
 html += `
-<div>
+<div class="item">
 <h3>${item.name}</h3>
-<p>¥${item.price}</p>
+<p>Price: ¥${item.price}</p>
+<p>Qty: ${item.qty}</p>
+<p>Total: ¥${itemTotal}</p>
+
+<button onclick="increase(${index})">+</button>
+<button onclick="decrease(${index})">-</button>
+<button onclick="removeItem(${index})">Remove</button>
 </div>
 `;
 
-total += item.price;
-
 });
 
-document.getElementById(
-"cartItems"
-).innerHTML = html;
+document.getElementById("cartItems").innerHTML = html;
+document.getElementById("cartTotal").innerHTML = "Total: ¥" + total;
 
-document.getElementById(
-"cartTotal"
-).innerHTML =
-"Total: ¥" + total;
+}
+
+function increase(i){
+let cart = getCart();
+cart[i].qty += 1;
+saveCart(cart);
+renderCart();
+}
+
+function decrease(i){
+let cart = getCart();
+cart[i].qty -= 1;
+
+if(cart[i].qty <= 0){
+cart.splice(i,1);
+}
+
+saveCart(cart);
+renderCart();
+}
+
+function removeItem(i){
+let cart = getCart();
+cart.splice(i,1);
+saveCart(cart);
+renderCart();
+}
 
 function clearCart(){
-
-localStorage.removeItem(
-"cart"
-);
-
-location.reload();
-
+localStorage.removeItem("cart");
+renderCart();
 }
 
 function goCheckout(){
-
-window.location.href =
-"checkout.html";
-
+window.location.href = "checkout.html";
 }
+
+renderCart();
 
 </script>
 
