@@ -14,7 +14,9 @@
 
 <a href="index.html">← Continue Shopping</a>
 
-<div id="cartItems"></div>
+<div id="cartItems">
+Loading cart...
+</div>
 
 <h2 id="cartTotal"></h2>
 
@@ -32,6 +34,10 @@ let cart =
 JSON.parse(
 localStorage.getItem("cart")
 ) || [];
+
+console.log(cart);
+
+alert("Items in cart: " + cart.length);
 
 let html = "";
 
