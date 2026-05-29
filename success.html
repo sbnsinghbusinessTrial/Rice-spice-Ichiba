@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Success</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>Thank You 🎉</h1>
+
+<h2>Your Order is Confirmed</h2>
+
+<h3 id="orderNumber"></h3>
+
+<hr>
+
+<h2>Order Summary</h2>
+
+<div id="orderDetails"></div>
+
+<h3 id="orderTotal"></h3>
+
+<hr>
+
+<h2>Customer Details</h2>
+
+<div id="customerDetails"></div>
+
+<br>
+
+<a href="index.html">Continue Shopping</a>
+
+<script>
+
+// GET saved order from checkout
+let order = JSON.parse(localStorage.getItem("lastOrder")) || {};
+let orderNumber = localStorage.getItem("lastOrderNumber");
+
+// Show order number
+document.getElementById("orderNumber").innerHTML =
+"Order Number: " + orderNumber;
+
+// Show order items
+let html = "";
+let total = 0;
+
+if(order.cart && order.cart.length > 0){
+
+order.cart.forEach(item => {
+html += `<p>${item.name} - ¥${item.price}</p>`;
+total += Number(item.price);
+});
+
+document.getElementById("orderDetails").innerHTML = html;
+document.getElementById("orderTotal").innerHTML = "Total: ¥" + total;
+
+}
+
+// Show customer details
+document.getElementById("customerDetails").innerHTML = `
+<p><b>Name:</b> ${order.name || ""}</p>
+<p><b>Phone:</b> ${order.phone || ""}</p>
+<p><b>Email:</b> ${order.email || ""}</p>
+<p><b>Address:</b> ${order.address || ""}</p>
+`;
+
+</script>
+
+</body>
+</html>
