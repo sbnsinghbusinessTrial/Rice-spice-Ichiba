@@ -56,10 +56,19 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let html = "";
 let total = 0;
 
-// DISPLAY CART
+// DISPLAY CART (FIXED)
 cart.forEach(item => {
-html += `<p>${item.name} - ¥${item.price}</p>`;
-total += Number(item.price);
+
+let itemTotal = item.price * item.qty;
+
+html += `
+<p>
+${item.name} × ${item.qty} = ¥${itemTotal}
+</p>
+`;
+
+total += itemTotal;
+
 });
 
 document.getElementById("orderSummary").innerHTML = html;
@@ -82,14 +91,14 @@ phone: document.getElementById("phone").value,
 email: document.getElementById("email").value,
 address: document.getElementById("address").value,
 
-// IMPORTANT FIX (THIS IS THE KEY)
+// KEEP STRUCTURE FOR GOOGLE SHEET
 items: JSON.stringify(cart),
 
 total: total,
 date: new Date().toLocaleString()
 };
 
-// SEND TO GOOGLE SHEETS
+// SEND TO GOOGLE SHEETS (FIXED URL REQUIRED)
 fetch("https://script.google.com/macros/s/AKfycbxL1aNFWUU7KBsdrH4cQMtLu_ORljcNSAqADIsH1mV_qLZZEtTyAkfWhvTdYaxqR4aMzQ/exec", {
 method: "POST",
 body: JSON.stringify(order)
