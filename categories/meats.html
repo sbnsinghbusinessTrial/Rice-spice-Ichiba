@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Special Offers - Rice Spice Ichiba</title>
+<title>Fresh Meats - Rice Spice Hub</title>
 
 <link rel="stylesheet" href="../css/style.css">
+
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -16,127 +18,280 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <body>
 
 <!-- HEADER -->
-<header>
+<div id="header"></div>
 
-<div class="topbar">
+<!-- PAGE TITLE -->
 
-    <div class="topbar-left">
-        <img src="../images/logo.jpg" class="site-logo">
-    </div>
-
-    <div class="topbar-center">
-        <div class="socials">
-            <a href="https://facebook.com" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-    </div>
-
-    <div class="topbar-right">
-        <input type="text" placeholder="Search products">
-    </div>
-
-</div>
-
-<nav>
-
-<div class="nav-links">
-    <a href="../index.html">Home</a>
-    <a href="../index.html#category">Categories</a>
-    <a href="../index.html#contact">Contact</a>
-</div>
-
-<div class="phone-number">
-    <i class="fas fa-phone"></i>
-    090-XXXX-XXXX
-</div>
-
-</nav>
-
-</header>
-
-<!-- BANNER -->
 <section class="category-banner">
 
-<h1>FRESH MEATS</h1>
-<p>BEST MEATS EVER IN JAPAN (HALAL GUARANTEED)</p>
+<h1>Fresh Meats</h1>
+
+<p>
+Best Meats Available in Japan (Halal Options Available)
+</p>
 
 </section>
 
-<!-- PRODUCTS -->
-<section class="products">
+<!-- MEAT CATEGORY -->
 
-<!-- PRODUCT 1 -->
+<section class="rice-category">
+
+<h2>Meat Categories</h2>
+
+<!-- MUTTON -->
+
+<details open>
+
+<summary>
+<span>Mutton</span>
+</summary>
+
+<div class="products">
+
 <div class="product">
+
 <img src="../meats/mixbakra.jpg">
-<h3>MIXBAKRA</h3>
 
-<p>
-<del>¥3,800</del>
-<strong>¥3,300</strong>
-</p>
+<h3>Mix Bakra</h3>
+
+<p>Fresh Goat Meat</p>
+
+<p class="price">¥3,300</p>
 
 <button class="add-to-cart"
-data-name="MIXBAKRA"
-data-price="3300">
+        data-name="Mix Bakra"
+        data-price="3300">
 Add To Cart
 </button>
 
 </div>
 
-<!-- PRODUCT 2 -->
 <div class="product">
+
 <img src="../meats/bonelessmutton.jpg">
-<h3>BONELESS MUTTON</h3>
 
-<p>
-<del>¥600</del>
-<strong>¥450</strong>
-</p>
+<h3>Boneless Mutton</h3>
+
+<p>Premium Boneless Goat Meat</p>
+
+<p class="price">¥4,500</p>
 
 <button class="add-to-cart"
-data-name="BONELESS MUTTON"
-data-price="450">
+        data-name="Boneless Mutton"
+        data-price="4500">
 Add To Cart
 </button>
 
 </div>
 
-<!-- PRODUCT 3 -->
 <div class="product">
-<img src="../meats/muttonwithbone.jpg">
-<h3>MUTTON WITH BONE</h3>
 
-<p>
-<del>¥1,500</del>
-<strong>¥1,200</strong>
-</p>
+<img src="../meats/muttonwithbone.jpg">
+
+<h3>Mutton With Bone</h3>
+
+<p>Fresh Goat Meat With Bone</p>
+
+<p class="price">¥1,200</p>
 
 <button class="add-to-cart"
-data-name="MUTTON WITH BONE"
-data-price="1200">
+        data-name="Mutton With Bone"
+        data-price="1200">
 Add To Cart
 </button>
 
 </div>
 
+</div>
+
+</details>
+
+<!-- CHICKEN -->
+
+<details>
+
+<summary>
+<span>Chicken</span>
+</summary>
+
+<div class="products">
+
+<div class="product">
+
+<img src="../meats/chicken.jpg">
+
+<h3>Whole Chicken</h3>
+
+<p>Fresh Halal Chicken</p>
+
+<p class="price">¥1,500</p>
+
+<button class="add-to-cart"
+        data-name="Whole Chicken"
+        data-price="1500">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product">
+
+<img src="../meats/chicken-breast.jpg">
+
+<h3>Chicken Breast</h3>
+
+<p>Boneless Chicken Breast</p>
+
+<p class="price">¥900</p>
+
+<button class="add-to-cart"
+        data-name="Chicken Breast"
+        data-price="900">
+Add To Cart
+</button>
+
+</div>
+
+</div>
+
+</details>
+
+<!-- PORK -->
+
+<details>
+
+<summary>
+<span>Pork</span>
+</summary>
+
+<div class="products">
+
+<div class="product">
+
+<img src="../meats/pork.jpg">
+
+<h3>Pork Slice</h3>
+
+<p>Fresh Pork</p>
+
+<p class="price">¥1,300</p>
+
+<button class="add-to-cart"
+        data-name="Pork Slice"
+        data-price="1300">
+Add To Cart
+</button>
+
+</div>
+
+</div>
+
+</details>
+
+<!-- DUCK -->
+
+<details>
+
+<summary>
+<span>Duck</span>
+</summary>
+
+<div class="products">
+
+<div class="product">
+
+<img src="../meats/duck.jpg">
+
+<h3>Whole Duck</h3>
+
+<p>Fresh Duck Meat</p>
+
+<p class="price">¥2,200</p>
+
+<button class="add-to-cart"
+        data-name="Whole Duck"
+        data-price="2200">
+Add To Cart
+</button>
+
+</div>
+
+</div>
+
+</details>
+
+<!-- DEER -->
+
+<details>
+
+<summary>
+<span>Deer</span>
+</summary>
+
+<div class="products">
+
+<div class="product">
+
+<img src="../meats/deer.jpg">
+
+<h3>Venison</h3>
+
+<p>Fresh Deer Meat</p>
+
+<p class="price">¥2,800</p>
+
+<button class="add-to-cart"
+        data-name="Venison"
+        data-price="2800">
+Add To Cart
+</button>
+
+</div>
+
+</div>
+
+</details>
+
+<!-- OTHER -->
+
+<details>
+
+<summary>
+<span>Other Meats</span>
+</summary>
+
+<div class="products">
+
+<div class="product">
+
+<img src="../meats/other.jpg">
+
+<h3>Special Meat Selection</h3>
+
+<p>Seasonal Availability</p>
+
+<p class="price">¥1,000</p>
+
+<button class="add-to-cart"
+        data-name="Special Meat Selection"
+        data-price="1000">
+Add To Cart
+</button>
+
+</div>
+
+</div>
+
+</details>
+
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
+<!-- FOOTER -->
+<div id="footer"></div>
 
-<h2>Need Assistance?</h2>
-<p>Phone: 090-XXXX-XXXX</p>
-<p>Address: Nishifunabashi, Chiba</p>
-
-</section>
-
-<footer>
-<p>© Rice Spice Ichiba</p>
-</footer>
+<script src="../js/cart.js"></script>
+<script src="../js/include.js"></script>
 
 </body>
+
 </html>
