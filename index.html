@@ -295,6 +295,9 @@
     </div>
 
 </div>
+<button onclick="showCart()">
+Show Cart Data
+</button>
 
 </section>
 
@@ -380,6 +383,16 @@ countElement.innerText = cart.length;
 
 }
 
+function showCart(){
+
+let cart =
+JSON.parse(
+localStorage.getItem("cart")
+) || [];
+
+alert(JSON.stringify(cart,null,2));
+
+}
 </script>
 
 </body>
