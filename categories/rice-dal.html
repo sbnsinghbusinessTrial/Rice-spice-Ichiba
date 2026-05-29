@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rice & Dal - Rice Spice Ichiba</title>
+<title>Rice & Dal - Rice Spice Hub</title>
 
 <link rel="stylesheet" href="../css/style.css">
 
@@ -18,64 +18,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <body>
 
 <!-- HEADER -->
-
-<header>
-
-<div class="topbar">
-
-    <div class="topbar-left">
-        <img src="../images/logo.jpg"
-             alt="Rice Spice Ichiba"
-             class="site-logo">
-    </div>
-
-    <div class="topbar-center">
-
-        <div class="socials">
-
-            <a href="https://facebook.com" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-
-            <a href="https://instagram.com" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="topbar-right">
-        <input type="text" placeholder="Search products">
-    </div>
-
-</div>
-
-<nav>
-
-<div class="nav-links">
-
-<a href="../index.html">Home</a>
-
-<a href="../index.html#category">Categories</a>
-
-<a href="../index.html#products">Products</a>
-
-<a href="../index.html#contact">Contact</a>
-
-</div>
-
-<div class="phone-number">
-
-<i class="fas fa-phone"></i>
-
-090-XXXX-XXXX
-
-</div>
-
-</nav>
-
-</header>
+<div id="header"></div>
 
 <!-- PAGE TITLE -->
 
@@ -84,7 +27,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <h1>Rice & Dal</h1>
 
 <p>
-Premium rice collection from around the world.
+Premium rice and dal collection from around the world.
 </p>
 
 </section>
@@ -100,46 +43,62 @@ Premium rice collection from around the world.
 <details open>
 
 <summary>
-
 <span>Basmati Rice</span>
-
 </summary>
 
 <div class="products">
 
 <div class="product">
 
-<img src="../offers/india-gate.jpg">
+<img src="../offers/india-gate.jpg" alt="India Gate">
 
 <h3>India Gate</h3>
 
 <p>Premium Basmati Rice</p>
 
-<button>Order</button>
+<p class="price">¥3,500</p>
+
+<button class="add-to-cart"
+        data-name="India Gate"
+        data-price="3500">
+Add To Cart
+</button>
 
 </div>
 
 <div class="product">
 
-<img src="../offers/lal-qilla.jpg">
+<img src="../offers/lal-qilla.jpg" alt="Lal Qilla">
 
 <h3>Lal Qilla</h3>
 
 <p>Premium Basmati Rice</p>
 
-<button>Order</button>
+<p class="price">¥3,300</p>
+
+<button class="add-to-cart"
+        data-name="Lal Qilla"
+        data-price="3300">
+Add To Cart
+</button>
 
 </div>
 
 <div class="product">
 
-<img src="../offers/daawat.jpg">
+<img src="../offers/daawat.jpg" alt="Daawat">
 
 <h3>Daawat</h3>
 
 <p>Premium Basmati Rice</p>
 
-<button>Order</button>
+<p class="price">¥3,200</p>
+
+<button class="add-to-cart"
+        data-name="Daawat"
+        data-price="3200">
+Add To Cart
+</button>
 
 </div>
 
@@ -152,34 +111,44 @@ Premium rice collection from around the world.
 <details>
 
 <summary>
-
 <span>Japanese Rice</span>
-
 </summary>
 
 <div class="products">
 
 <div class="product">
 
-<img src="../offers/koshihikari.jpg">
+<img src="../offers/koshihikari.jpg" alt="Koshihikari">
 
 <h3>Koshihikari</h3>
 
 <p>Japanese Rice</p>
 
-<button>Order</button>
+<p class="price">¥4,200</p>
+
+<button class="add-to-cart"
+        data-name="Koshihikari"
+        data-price="4200">
+Add To Cart
+</button>
 
 </div>
 
 <div class="product">
 
-<img src="../offers/akitakomachi.jpg">
+<img src="../offers/akitakomachi.jpg" alt="Akitakomachi">
 
 <h3>Akitakomachi</h3>
 
 <p>Japanese Rice</p>
 
-<button>Order</button>
+<p class="price">¥3,900</p>
+
+<button class="add-to-cart"
+        data-name="Akitakomachi"
+        data-price="3900">
+Add To Cart
+</button>
 
 </div>
 
@@ -192,34 +161,44 @@ Premium rice collection from around the world.
 <details>
 
 <summary>
-
 <span>American Rice</span>
-
 </summary>
 
 <div class="products">
 
 <div class="product">
 
-<img src="../offers/long-grain.jpg">
+<img src="../offers/long-grain.jpg" alt="Long Grain Rice">
 
 <h3>Long Grain Rice</h3>
 
 <p>American Rice</p>
 
-<button>Order</button>
+<p class="price">¥2,500</p>
+
+<button class="add-to-cart"
+        data-name="Long Grain Rice"
+        data-price="2500">
+Add To Cart
+</button>
 
 </div>
 
 <div class="product">
 
-<img src="../offers/medium-grain.jpg">
+<img src="../offers/medium-grain.jpg" alt="Medium Grain Rice">
 
 <h3>Medium Grain Rice</h3>
 
 <p>American Rice</p>
 
-<button>Order</button>
+<p class="price">¥2,700</p>
+
+<button class="add-to-cart"
+        data-name="Medium Grain Rice"
+        data-price="2700">
+Add To Cart
+</button>
 
 </div>
 
@@ -232,34 +211,44 @@ Premium rice collection from around the world.
 <details>
 
 <summary>
-
 <span>Nepali Rice</span>
-
 </summary>
 
 <div class="products">
 
 <div class="product">
 
-<img src="../offers/mansuli.jpg">
+<img src="../offers/mansuli.jpg" alt="Mansuli Rice">
 
 <h3>Mansuli Rice</h3>
 
 <p>Nepali Rice</p>
 
-<button>Order</button>
+<p class="price">¥2,800</p>
+
+<button class="add-to-cart"
+        data-name="Mansuli Rice"
+        data-price="2800">
+Add To Cart
+</button>
 
 </div>
 
 <div class="product">
 
-<img src="../offers/jeera-masino.jpg">
+<img src="../offers/jeera-masino.jpg" alt="Jeera Masino">
 
 <h3>Jeera Masino</h3>
 
 <p>Nepali Rice</p>
 
-<button>Order</button>
+<p class="price">¥3,100</p>
+
+<button class="add-to-cart"
+        data-name="Jeera Masino"
+        data-price="3100">
+Add To Cart
+</button>
 
 </div>
 
@@ -272,34 +261,44 @@ Premium rice collection from around the world.
 <details>
 
 <summary>
-
 <span>DAL</span>
-
 </summary>
 
 <div class="products">
 
 <div class="product">
 
-<img src="../offers/koshihikari.jpg">
+<img src="../offers/red-lentil.jpg" alt="Masoor Dal">
 
-<h3>Koshihikari</h3>
+<h3>Masoor Dal</h3>
 
-<p>Japanese Rice</p>
+<p>Red Lentil</p>
 
-<button>Order</button>
+<p class="price">¥650</p>
+
+<button class="add-to-cart"
+        data-name="Masoor Dal"
+        data-price="650">
+Add To Cart
+</button>
 
 </div>
 
 <div class="product">
 
-<img src="../offers/akitakomachi.jpg">
+<img src="../offers/chana-dal.jpg" alt="Chana Dal">
 
-<h3>Akitakomachi</h3>
+<h3>Chana Dal</h3>
 
-<p>Japanese Rice</p>
+<p>Split Chickpeas</p>
 
-<button>Order</button>
+<p class="price">¥700</p>
+
+<button class="add-to-cart"
+        data-name="Chana Dal"
+        data-price="700">
+Add To Cart
+</button>
 
 </div>
 
@@ -309,35 +308,11 @@ Premium rice collection from around the world.
 
 </section>
 
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
-<h2>Contact Us</h2>
-
-<p>Phone: 090-XXXX-XXXX</p>
-
-<p>Email: info@ricespiceichiba.com</p>
-
-<p>Address: Nishifunabashi, Chiba, Japan</p>
-
-</section>
-
 <!-- FOOTER -->
+<div id="footer"></div>
 
-<footer>
-
-<p>© 2026 Rice Spice Ichiba. All Rights Reserved.</p>
-
-<div class="footer-social">
-
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-
-<a href="#"><i class="fab fa-instagram"></i></a>
-
-</div>
-
-</footer>
+<script src="../js/cart.js"></script>
+<script src="../js/include.js"></script>
 
 </body>
 
