@@ -55,19 +55,29 @@
 
     <div class="nav-links">
 
-    <a href=>Home</a>
+    <a href="index.html">Home</a>
     <a href="#category">Categories</a>
     <a href="#products">Products</a>
     <a href="#contact">Contact</a>
     <a href="categories/offers.html">Special Offers</a>
     <a href="categories/about.html">About</a>
+    <a href="membership.html">Membership</a>
 
     </div>
+
+    <div class="nav-right">
+
+    <a href="cart.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        Cart (<span id="cartCount">0</span>)
+    </a>
 
     <div class="phone-number">
         <i class="fas fa-phone"></i>
         090-1234-5678
     </div>
+
+</div>
 
 </nav>
 
@@ -216,48 +226,97 @@
         <img src="featuredproducts/basmati.jpg" alt="Basmati Rice">
         <h3>Basmati Rice</h3>
         <p>¥3,500</p>
-        <button>Order</button>
+        <button onclick="addToCart(
+        'Basmati Rice',
+        3500
+        )">
+        Add To Cart
+        </button>
     </div>
 
     <div class="product">
         <img src="featuredproducts/masala.jpg" alt="Masala Mix">
         <h3>Masala Mix</h3>
         <p>¥500</p>
-        <button>Order</button>
+        <button onclick="addToCart(
+        'Masala Mix',
+        3500
+        )">
+        Add To Cart
+        </button>
     </div>
 
     <div class="product">
         <img src="featuredproducts/chicken.jpg" alt="Halal Chicken">
         <h3>Halal Chicken</h3>
         <p>¥1,200</p>
-        <button>Order</button>
+        <button onclick="addToCart(
+        'Halal Chicken',
+        3500
+        )">
+        Add To Cart
+        </button>
     </div>
 
     <div class="product">
         <img src="featuredproducts/waiwai.jpg" alt="WaiWai">
         <h3>WaiWai</h3>
         <p>¥999</p>
-        <button>Order</button>
+        <button onclick="addToCart(
+        'WaiWai',
+        3500
+        )">
+        Add To Cart
+        </button>
     </div>
 
     <div class="product">
         <img src="featuredproducts/ghee.jpg" alt="DDC GHEE">
         <h3>DDC GHEE</h3>
         <p>¥999</p>
-        <button>Order</button>
+        <button onclick="addToCart(
+        'DDC GHEE',
+        3500
+        )">
+        Add To Cart
+        </button>
     </div>
 
     <div class="product">
         <img src="featuredproducts/tokla.jpg" alt="TOKLA TEA">
         <h3>TOKLA TEA</h3>
         <p>¥999</p>
-        <button>Order</button>
+        <button onclick="addToCart(
+        'TOKLE TEA',
+        3500
+        )">
+        Add To Cart
+        </button>
     </div>
 
 </div>
 
 </section>
 
+<section class="membership">
+
+<h2>Rice Spice Hub Membership</h2>
+
+<p>
+Join our membership program and earn
+1 point for every ¥200 spent.
+</p>
+
+<p>
+Redeem points for discounts, rewards,
+and special offers.
+</p>
+
+<a href="membership.html" class="btn">
+Join Membership
+</a>
+
+</section>
 <!-- CONTACT -->
 
 <section class="contact" id="contact">
@@ -276,7 +335,52 @@
 
 <p>© Rice Spice Ichiba</p>
 
+<footer>
+
+<p>© Rice Spice Ichiba</p>
+
 </footer>
+
+<script>
+
+let cart =
+JSON.parse(
+localStorage.getItem("cart")
+) || [];
+
+updateCartCount();
+
+function addToCart(name, price){
+
+cart.push({
+name:name,
+price:price,
+qty:1
+});
+
+localStorage.setItem(
+"cart",
+JSON.stringify(cart)
+);
+
+updateCartCount();
+
+alert(name + " added to cart");
+
+}
+
+function updateCartCount(){
+
+const countElement =
+document.getElementById("cartCount");
+
+if(countElement){
+countElement.innerText = cart.length;
+}
+
+}
+
+</script>
 
 </body>
 </html>
