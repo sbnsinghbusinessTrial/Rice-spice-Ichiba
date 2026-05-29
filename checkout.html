@@ -20,7 +20,7 @@
 
 <hr>
 
-<form id="checkoutForm">
+<form>
 
 <p>
 <label>Name</label><br>
@@ -50,13 +50,13 @@ Place Order
 
 <script>
 
-// Load cart
+// LOAD CART
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 let html = "";
 let total = 0;
 
-// Show cart
+// DISPLAY CART
 cart.forEach(item => {
 html += `<p>${item.name} - ¥${item.price}</p>`;
 total += Number(item.price);
@@ -65,7 +65,7 @@ total += Number(item.price);
 document.getElementById("orderSummary").innerHTML = html;
 document.getElementById("orderTotal").innerHTML = "Total: ¥" + total;
 
-// Submit order
+// SUBMIT ORDER
 function submitOrder(){
 
 if(cart.length === 0){
@@ -73,43 +73,44 @@ alert("Cart is empty!");
 return;
 }
 
-// generate order number
 let orderNumber = "ORD" + Date.now();
 
-// create order object
 let order = {
 orderNumber: orderNumber,
 name: document.getElementById("name").value,
 phone: document.getElementById("phone").value,
 email: document.getElementById("email").value,
 address: document.getElementById("address").value,
+
+// IMPORTANT FIX (THIS IS THE KEY)
 items: JSON.stringify(cart),
+
 total: total,
 date: new Date().toLocaleString()
 };
 
-// STEP 1: send to Google Sheets
-fetch("https://script.google.com/macros/s/AKfycbwB8jFUe-QwwVhhbHr2sJi7aQyL_OIIoOZA9MCuQi15jQdfyW_O8F5LpRCQb-NfML6a5Q/exec", {
+// SEND TO GOOGLE SHEETS
+fetch("https://script.google.com/macros/s/AKfycbxL1aNFWUU7KBsdrH4cQMtLu_ORljcNSAqADIsH1mV_qLZZEtTyAkfWhvTdYaxqR4aMzQ/exec", {
 method: "POST",
 body: JSON.stringify(order)
 })
-.then(response => response.text())
+.then(res => res.text())
 .then(data => {
 
-// STEP 2: local storage backup
+// SAVE LOCAL BACKUP
 localStorage.setItem("lastOrder", JSON.stringify(order));
 localStorage.setItem("lastOrderNumber", orderNumber);
 
-// STEP 3: clear cart
+// CLEAR CART
 localStorage.removeItem("cart");
 
-// STEP 4: go to success page
+// REDIRECT
 window.location.href = "success.html";
 
 })
-.catch(error => {
-alert("Error sending order. Check internet or script.");
-console.log(error);
+.catch(err => {
+alert("Order failed. Check script.");
+console.log(err);
 });
 
 }
