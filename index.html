@@ -346,26 +346,34 @@ Join Membership
 
 <script>
 
-let cart =
-JSON.parse(
-localStorage.getItem("cart")
-) || [];
-
 updateCartCount();
+
+function getCart(){
+return JSON.parse(localStorage.getItem("cart")) || [];
+}
+
+function saveCart(cart){
+localStorage.setItem("cart", JSON.stringify(cart));
+}
 
 function addToCart(name, price){
 
+let cart = getCart();
+
+// check if item exists
+let existing = cart.find(item => item.name === name);
+
+if (existing) {
+existing.qty += 1;
+} else {
 cart.push({
-name:name,
-price:price,
-qty:1
+name: name,
+price: price,
+qty: 1
 });
+}
 
-localStorage.setItem(
-"cart",
-JSON.stringify(cart)
-);
-
+saveCart(cart);
 updateCartCount();
 
 alert(name + " added to cart");
@@ -374,25 +382,30 @@ alert(name + " added to cart");
 
 function updateCartCount(){
 
-const countElement =
-document.getElementById("cartCount");
+let cart = getCart();
+
+let totalQty = 0;
+
+cart.forEach(item => {
+totalQty += item.qty;
+});
+
+let countElement = document.getElementById("cartCount");
 
 if(countElement){
-countElement.innerText = cart.length;
+countElement.innerText = totalQty;
 }
 
 }
 
 function showCart(){
 
-let cart =
-JSON.parse(
-localStorage.getItem("cart")
-) || [];
+let cart = getCart();
 
-alert(JSON.stringify(cart,null,2));
+alert(JSON.stringify(cart, null, 2));
 
 }
+
 </script>
 
 </body>
