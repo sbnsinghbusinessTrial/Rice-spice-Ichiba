@@ -29,7 +29,7 @@ body{
 }
 
 .site-logo{
-    width:220px;
+    width:200px;
 }
 
 /* =========================
@@ -41,7 +41,7 @@ nav{
     justify-content:space-between;
     align-items:center;
     background:#198754;
-    padding:20px 35px;
+    padding:18px 30px;
 }
 
 .nav-links a{
@@ -62,12 +62,11 @@ nav{
 
 .hero{
     text-align:center;
-    padding:50px 20px;
+    padding:40px 20px;
 }
 
 /* =========================
-   ⭐ UNIVERSAL GRID SYSTEM
-   (APPLIES TO EVERYTHING)
+   ⭐ UNIFIED GRID SYSTEM (CORE FIX)
 ========================= */
 
 .category-grid,
@@ -77,56 +76,54 @@ nav{
 .products-grid{
     display:grid;
 
-    /* DESKTOP DEFAULT */
-    grid-template-columns:repeat(6, 1fr);
+    grid-template-columns:repeat(6, 1fr); /* DESKTOP DEFAULT */
 
-    gap:10px;
-    padding:10px;
+    gap:12px;
+    padding:12px;
 
     align-items:stretch;
 }
 
 /* =========================
-   CARD STYLE (CATEGORY)
+   CARD BASE (CATEGORY)
 ========================= */
 
 .card{
     background:white;
     border:1px solid #ddd;
-    border-radius:8px;
+    border-radius:10px;
     text-align:center;
-    padding:6px;
+    padding:8px;
 }
 
 /* =========================
-   PRODUCT BOX
+   PRODUCT CARD (UNIFORM)
 ========================= */
 
 .product{
     background:#87CEEB;
-    border-radius:8px;
+    border-radius:10px;
     padding:8px;
-    text-align:center;
 
     display:flex;
     flex-direction:column;
     justify-content:space-between;
 
-    min-height:220px;
+    min-height:230px;
 }
 
 /* =========================
-   IMAGE FIX (CRITICAL)
+   IMAGE FIX (NEVER BREAK LAYOUT)
 ========================= */
 
 .product img,
 .card img{
     width:100%;
-    height:100px;
+    height:110px;
     object-fit:contain;
     background:white;
-    border-radius:6px;
-    padding:3px;
+    border-radius:8px;
+    padding:4px;
 }
 
 /* =========================
@@ -134,13 +131,13 @@ nav{
 ========================= */
 
 .product h3{
-    font-size:12px;
-    margin:5px 0;
+    font-size:13px;
+    margin:6px 0;
 }
 
 .product p,
 .product .price{
-    font-size:11px;
+    font-size:12px;
     margin:3px 0;
 }
 
@@ -152,10 +149,11 @@ nav{
     background:#198754;
     color:white;
     border:none;
-    padding:5px 6px;
+    padding:6px;
     border-radius:5px;
     cursor:pointer;
-    font-size:11px;
+    font-size:12px;
+
     margin-top:auto;
 }
 
@@ -164,7 +162,7 @@ nav{
 ========================= */
 
 .contact{
-    padding:40px 20px;
+    padding:50px 20px;
     background:#f4f4f4;
     text-align:center;
 }
@@ -193,50 +191,50 @@ footer{
 }
 
 /* =========================
-   MOBILE (6 COLUMNS - COMPACT MODE)
+   MOBILE (3 COLUMNS — YOUR REQUIREMENT)
 ========================= */
 
 @media (max-width:768px){
     .category-grid,
     .products,
     .rice-category .products{
-        grid-template-columns:repeat(6, 1fr);
-        gap:6px;
-        padding:6px;
+        grid-template-columns:repeat(3, 1fr);
+        gap:10px;
+        padding:10px;
     }
 
     .product{
-        min-height:180px;
-        padding:5px;
+        min-height:200px;
+        padding:6px;
     }
 
     .product img{
-        height:70px;
+        height:85px;
     }
 
     .product h3{
-        font-size:10px;
+        font-size:11px;
     }
 
     .product p,
     .product .price{
-        font-size:9px;
+        font-size:10px;
     }
 
     .product button{
-        font-size:9px;
-        padding:4px;
+        font-size:10px;
+        padding:5px;
     }
 }
 
 /* =========================
-   SMALL MOBILE (KEEP SAME 6 COL)
+   SMALL MOBILE (STILL 3 COLUMNS)
 ========================= */
 
 @media (max-width:480px){
     .category-grid,
     .products,
     .rice-category .products{
-        grid-template-columns:repeat(6, 1fr);
+        grid-template-columns:repeat(3, 1fr);
     }
 }
