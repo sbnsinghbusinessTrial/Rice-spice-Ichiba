@@ -65,27 +65,23 @@ nav{
 }
 
 /* =========================
-   ⭐ GLOBAL GRID SYSTEM (IMPORTANT)
-   USED FOR:
-   - category-grid
-   - products
-   - sub-categories
+   ⭐ GLOBAL GRID SYSTEM (FOR EVERYTHING)
 ========================= */
 
 .category-grid,
 .products,
 .rice-category .products,
-.rice-category,
-.products-grid,
-.grid{
+.grid,
+.products-grid{
     display:grid;
-    grid-template-columns:repeat(4, 1fr); /* ⭐ FIXED 4 COLUMNS */
+    grid-template-columns:repeat(4, 1fr); /* FIXED 4 COLUMNS ALWAYS */
     gap:15px;
     padding:20px;
+    align-items:stretch;
 }
 
 /* =========================
-   CARD STYLE (CATEGORIES)
+   CARD DESIGN (CATEGORIES)
 ========================= */
 
 .card{
@@ -97,25 +93,42 @@ nav{
 }
 
 /* =========================
-   PRODUCT STYLE
+   PRODUCT BOX (UNIFORM SIZE)
 ========================= */
 
 .product{
     background:#87CEEB;
-    padding:10px;
     border-radius:10px;
+    padding:10px;
     text-align:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    min-height:260px;
 }
 
-.product img{
+/* =========================
+   IMAGE FIX (VERY IMPORTANT)
+========================= */
+
+.product img,
+.card img{
     width:100%;
-    height:120px;
+    height:140px;
     object-fit:contain;
     background:white;
     border-radius:8px;
+    padding:5px;
 }
 
-.product h3{
+/* =========================
+   TEXT
+========================= */
+
+.product h3,
+.card h3{
     font-size:14px;
     margin:8px 0;
 }
@@ -123,9 +136,13 @@ nav{
 .product p,
 .product .price{
     font-size:13px;
+    margin:4px 0;
 }
 
-/* BUTTON */
+/* =========================
+   BUTTON
+========================= */
+
 .product button{
     background:#198754;
     color:white;
@@ -133,6 +150,11 @@ nav{
     padding:6px 10px;
     border-radius:5px;
     cursor:pointer;
+    margin-top:auto;
+}
+
+.product button:hover{
+    background:#146c43;
 }
 
 /* =========================
@@ -157,7 +179,7 @@ footer{
 }
 
 /* =========================
-   RESPONSIVE (SAME GRID ALWAYS CONSISTENT)
+   RESPONSIVE (NO 2-COLUMN ANYWHERE)
 ========================= */
 
 @media (max-width:1024px){
@@ -172,7 +194,7 @@ footer{
     .category-grid,
     .products,
     .rice-category .products{
-        grid-template-columns:repeat(4, 1fr); /* still 4 columns */
+        grid-template-columns:repeat(4, 1fr); /* KEEP 4 columns */
     }
 }
 
@@ -180,6 +202,6 @@ footer{
     .category-grid,
     .products,
     .rice-category .products{
-        grid-template-columns:repeat(4, 1fr); /* FORCE SAME 4 columns everywhere */
+        grid-template-columns:repeat(4, 1fr); /* STILL 4 columns */
     }
 }
