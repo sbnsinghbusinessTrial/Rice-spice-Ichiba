@@ -1,3 +1,4 @@
+
 /* =========================
    RESET
 ========================= */
@@ -65,7 +66,8 @@ nav{
 }
 
 /* =========================
-   ⭐ GLOBAL GRID SYSTEM (FOR EVERYTHING)
+   ⭐ UNIVERSAL GRID SYSTEM
+   (APPLIES TO EVERYTHING)
 ========================= */
 
 .category-grid,
@@ -74,69 +76,72 @@ nav{
 .grid,
 .products-grid{
     display:grid;
-    grid-template-columns:repeat(4, 1fr); /* FIXED 4 COLUMNS ALWAYS */
-    gap:15px;
-    padding:20px;
+
+    /* DESKTOP DEFAULT */
+    grid-template-columns:repeat(6, 1fr);
+
+    gap:10px;
+    padding:10px;
+
     align-items:stretch;
 }
 
 /* =========================
-   CARD DESIGN (CATEGORIES)
+   CARD STYLE (CATEGORY)
 ========================= */
 
 .card{
     background:white;
     border:1px solid #ddd;
-    border-radius:10px;
+    border-radius:8px;
     text-align:center;
-    padding:10px;
+    padding:6px;
 }
 
 /* =========================
-   PRODUCT BOX (UNIFORM SIZE)
+   PRODUCT BOX
 ========================= */
 
 .product{
     background:#87CEEB;
-    border-radius:10px;
-    padding:10px;
+    border-radius:8px;
+    padding:8px;
     text-align:center;
 
     display:flex;
     flex-direction:column;
     justify-content:space-between;
 
-    min-height:260px;
+    min-height:220px;
 }
 
 /* =========================
-   IMAGE FIX (VERY IMPORTANT)
+   IMAGE FIX (CRITICAL)
 ========================= */
 
 .product img,
 .card img{
     width:100%;
-    height:140px;
+    height:100px;
     object-fit:contain;
     background:white;
-    border-radius:8px;
-    padding:5px;
+    border-radius:6px;
+    padding:3px;
 }
 
 /* =========================
    TEXT
 ========================= */
 
-.product h3,
-.card h3{
-    font-size:14px;
-    margin:8px 0;
+.product h3{
+    font-size:12px;
+    margin:5px 0;
 }
 
 .product p,
 .product .price{
-    font-size:13px;
-    margin:4px 0;
+    font-size:11px;
+    margin:3px 0;
 }
 
 /* =========================
@@ -147,14 +152,11 @@ nav{
     background:#198754;
     color:white;
     border:none;
-    padding:6px 10px;
+    padding:5px 6px;
     border-radius:5px;
     cursor:pointer;
+    font-size:11px;
     margin-top:auto;
-}
-
-.product button:hover{
-    background:#146c43;
 }
 
 /* =========================
@@ -162,7 +164,7 @@ nav{
 ========================= */
 
 .contact{
-    padding:60px 30px;
+    padding:40px 20px;
     background:#f4f4f4;
     text-align:center;
 }
@@ -179,7 +181,7 @@ footer{
 }
 
 /* =========================
-   RESPONSIVE (NO 2-COLUMN ANYWHERE)
+   TABLET (4 COLUMNS)
 ========================= */
 
 @media (max-width:1024px){
@@ -190,18 +192,51 @@ footer{
     }
 }
 
+/* =========================
+   MOBILE (6 COLUMNS - COMPACT MODE)
+========================= */
+
 @media (max-width:768px){
     .category-grid,
     .products,
     .rice-category .products{
-        grid-template-columns:repeat(4, 1fr); /* KEEP 4 columns */
+        grid-template-columns:repeat(6, 1fr);
+        gap:6px;
+        padding:6px;
+    }
+
+    .product{
+        min-height:180px;
+        padding:5px;
+    }
+
+    .product img{
+        height:70px;
+    }
+
+    .product h3{
+        font-size:10px;
+    }
+
+    .product p,
+    .product .price{
+        font-size:9px;
+    }
+
+    .product button{
+        font-size:9px;
+        padding:4px;
     }
 }
+
+/* =========================
+   SMALL MOBILE (KEEP SAME 6 COL)
+========================= */
 
 @media (max-width:480px){
     .category-grid,
     .products,
     .rice-category .products{
-        grid-template-columns:repeat(4, 1fr); /* STILL 4 columns */
+        grid-template-columns:repeat(6, 1fr);
     }
 }
